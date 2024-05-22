@@ -116,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="sidebar_activity">
+                <div class="sidebar-activity" id="sidebarActivity">
                     <h3>RECENT</h3>
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
                             class="bi bi-arrow-repeat" viewBox="0 0 16 16">
@@ -197,6 +197,7 @@
                                     <a href="">Discover More</a>
                                 </div>
                 </div>
+                <p id="showMoreLink" onclick="toggleActivity()">Show More +</p>
             </div>
             <!-- Left sidebar ends -->
 
@@ -483,6 +484,21 @@
             let pro =document.getElementById("profileMenu");
             function toggleMenu(){
                 profileMenu.classList.toggle("open-menu");                                                                                                                                                             
+            }
+        </script>
+        <script>
+        
+            let sideActivity = document.getElementById("sidebarActivity");
+            let moreLink = document.getElementById("showMoreLink");
+
+            function toggleActivity(){
+                sideActivity.classList.toggle("open-activity");
+                    if(sideActivity.classList.contains("open-activity")){
+                    moreLink.innerHTML="Show less<b>-</b>"}
+                    else{
+                        moreLink.innerHTML="Show less<b>+</b>";
+                    }
+                
             }
         </script>
     </body>

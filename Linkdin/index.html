@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkdin Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    </head>
+
+    <body>
+        <!-------------------------------------------------NAVBAR START----------------------------------------------------->
+        <nav class="navbar">
+
+            <div class="navbar-left">
+                <a href="index.html" class="logo"><img src="Image/logo.png"></a>
+
+                <div class="search-box">
+                    <img src="Image/search.png" alt>
+                    <input type="text" placeholder="Search">
+                </div>
+
+            </div>
+            <div class="navbar-center">
+                <ul>
+                    <li><a href="#" class="active-link"><span><i class="bi bi-house-fill"></i>Home</span></li>
+                    <li><a href="#"><i class="bi bi-person-fill"></i><span>My Network</span></li>
+                    <li><a href="#"><i class="bi bi-suitcase-lg-fill"></i><span>Jobs</span></li>
+                    <li><a href="#"><i class="bi bi-chat-left-text-fill"></i><span>Messages</span></li>
+                    <li><a href="#"><i class="bi bi-bell-fill"></i><span>Notifications</span></li>
+                </ul>
+
+            </div>
+            <div class="navbar-right">
+                <div class="online">
+                    <img src="Image/user-1.jpeg" class="nav-propfile-img"onclick="toggleMenu()">
+                </div>
+
+            </div>
+            <!----------------------------------- Profile-dropdown Menu -->
+            <div class="profile-menu-wrap"id="profileMenu">
+                <div class="profile-menu">
+                    <div class="user-info">
+                        <img src="Image/user-1.jpeg" alt="">
+                        <div>
+                        <h3>Bill Gates</h3>
+                        <a href="profile.html">See your profile</a>
+                        </div>
+                        
+                    </div>
+                    <hr>
+
+                    <a href="#" class="profile-menu-link">
+                        <img src="Image/feedback.png" alt="">
+                        <p>Give Feedback</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="profile-menu-link">
+                        <img src="Image/setting.png" alt="">
+                        <p>Settings & Privacy</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="profile-menu-link">
+                        <img src="Image/help.png" alt="">
+                        <p>Help</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="profile-menu-link">
+                        <img src="Image/display.png" alt="">
+                        <p>Display & Accessibility</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="profile-menu-link">
+                        <img src="Image/logout.png" alt="">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-------------------------------------------------NAVBAR END----------------------------------------------------->
+
+        <div class="container">
+            <!-- Left sidebar starts -->
+            <div class="left-sidebar">
+                <div class="sidebar-profile-box">
+                    <img src="Image/cover-pic.jpg" width="100%">
+                    <div class="sidebar-profile-info">
+                        <img src="Image/user-1.jpeg" alt>
+                        <h1>Bill Gates</h1>
+                        <h3>Former CEO of Microsoft</h3>
+                        <ul>
+                            <li>Your Profile
+                                View<span>52</span></li>
+                            <li>Your
+                                Post<span>132</span></li>
+                            <li>Your
+                                Connections<span>889</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-profile-link">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2244B5"
+                                class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
+                            </svg>My Items</a>
+
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFB733"
+                                class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5M8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.18.18 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.18.18 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.18.18 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.18.18 0 0 1-.134-.098z" />
+                            </svg>Try Premium</a>
+                    </div>
+                </div>
+
+                <div class="sidebar_activity">
+                    <h3>RECENT</h3>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                            <path
+                                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                            <path fill-rule="evenodd"
+                                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                        </svg>Web Development</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                            <path
+                                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                            <path fill-rule="evenodd"
+                                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                        </svg>User Interface</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                            <path
+                                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                            <path fill-rule="evenodd"
+                                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                        </svg>Online Learning</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                            <path
+                                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9" />
+                            <path fill-rule="evenodd"
+                                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z" />
+                        </svg>Code Better</a>
+                    <br>
+                    <h3>GROUPS</h3>
+
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-people" viewBox="0 0 16 16">
+                            <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                        </svg>Web Development</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-people" viewBox="0 0 16 16">
+                            <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                        </svg>User Interface</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-people" viewBox="0 0 16 16">
+                            <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                        </svg>Online Learning</a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271B5"
+                            class="bi bi-people" viewBox="0 0 16 16">
+                            <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                        </svg>Code Better</a>
+                    <br>
+                    <h3>HASHTAG</h3>
+
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2271b5"
+                            class="bi bi-hash" viewBox="0 0 16 16">
+                            <path
+                                d="M8.39 12.648a1 1 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1 1 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.51.51 0 0 0-.523-.516.54.54 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532s.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531s.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z" />
+                        </svg>Web Development</a>
+                    <a href="#"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="#2271b5" class="bi bi-hash" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.39 12.648a1 1 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1 1 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.51.51 0 0 0-.523-.516.54.54 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532s.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531s.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z" />
+                            </svg>User Interface</a>
+                        <a href="#"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="#2271b5" class="bi bi-hash" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.39 12.648a1 1 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1 1 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.51.51 0 0 0-.523-.516.54.54 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532s.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531s.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z" />
+                                </svg>Online Learning</a>
+                            <a href="#"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="#2271b5" class="bi bi-hash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.39 12.648a1 1 0 0 0-.015.18c0 .305.21.508.5.508.266 0 .492-.172.555-.477l.554-2.703h1.204c.421 0 .617-.234.617-.547 0-.312-.188-.53-.617-.53h-.985l.516-2.524h1.265c.43 0 .618-.227.618-.547 0-.313-.188-.524-.618-.524h-1.046l.476-2.304a1 1 0 0 0 .016-.164.51.51 0 0 0-.516-.516.54.54 0 0 0-.539.43l-.523 2.554H7.617l.477-2.304c.008-.04.015-.118.015-.164a.51.51 0 0 0-.523-.516.54.54 0 0 0-.531.43L6.53 5.484H5.414c-.43 0-.617.22-.617.532s.187.539.617.539h.906l-.515 2.523H4.609c-.421 0-.609.219-.609.531s.188.547.61.547h.976l-.516 2.492c-.008.04-.015.125-.015.18 0 .305.21.508.5.508.265 0 .492-.172.554-.477l.555-2.703h2.242zm-1-6.109h2.266l-.515 2.563H6.859l.532-2.563z" />
+                                    </svg>Code Better</a>
+                                <br>
+                                <div class="disocver-more-link">
+                                    <a href="">Discover More</a>
+                                </div>
+                </div>
+            </div>
+            <!-- Left sidebar ends -->
+
+
+
+
+
+
+            <!-- Main Content starts -->
+            <div class="main-content">
+                <div class="create-post">
+
+                    <div class="create-post-input">
+
+                        <img src="Image/user-1.jpeg" alt="">
+                        <textarea rows="2" placeholder="Write a post"></textarea>
+                    </div>
+
+                    <div class="create-post-links">
+                       <li><img src="Image/camera.png" alt="">Photo</li> 
+                       <li><img src="Image/video.png" alt="">Video</li> 
+                       <li><img src="Image/event.png" alt="">Event</li> 
+                       <li>Post</li> 
+                    </div>
+                </div>
+
+                <div class="sort-by">
+                    <hr>
+                    <p>Sort by:<span>top
+                        <img src="Image/down-arrow.png"> 
+                    </span></p>
+                </div>
+                <div class="post">
+
+                    <div class="post-author">
+                        <img src="Image/user-3.png" alt="">
+                        <div>
+                            <h1>Meghna Shirsale</h1>
+                            <small>Associate Consulatant at Eviden</small>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At praesentium architecto asperiores sunt, porro eaque expedita est ea non accusamus labore aliquid velit impedit ex, excepturi explicabo rerum quaerat ut.</p>
+                <img src="Image/post-image-1.webp" alt="" width="100%">
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="Image/thumbsup.png" alt="" width="25px">
+                        <img src="Image/love.png" alt=""width="25px">
+                        <img src="Image/clap.png" alt=""width="25px">
+                        <span class="liked-user">Loes jove and 715 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="Image/user-1.jpeg" alt="" class="post-activity-user-icon">
+                        <img src="Image/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/like.png" alt="" >
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/comment.png" alt="" >
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/share.png" alt="" >
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/send.png" alt="" >
+                        <span>Send</span>
+                    </div>
+                </div>
+                </div>
+                <!-------------------------------------- -->
+                
+                <div class="post">
+
+                    <div class="post-author">
+                        <img src="Image/user-3.png" alt="">
+                        <div>
+                            <h1>Joves R</h1>
+                            <small>Associate Consulatant at Eviden</small>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At praesentium architecto asperiores sunt, porro eaque expedita est ea non accusamus labore aliquid velit impedit ex, excepturi explicabo rerum quaerat ut.</p>
+                <img src="Image/post-image-2.webp" alt="" width="100%">
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="Image/thumbsup.png" alt="" width="25px">
+                        <img src="Image/love.png" alt=""width="25px">
+                        <img src="Image/clap.png" alt=""width="25px">
+                        <span class="liked-user">Loes jove and 715 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="Image/user-1.jpeg" alt="" class="post-activity-user-icon">
+                        <img src="Image/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/like.png" alt="" >
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/comment.png" alt="" >
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/share.png" alt="" >
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/send.png" alt="" >
+                        <span>Send</span>
+                    </div>
+                </div>
+                </div>
+                <!-------------------------------------------------------------------->
+                <div class="post">
+
+                    <div class="post-author">
+                        <img src="Image/user-3.png" alt="">
+                        <div>
+                            <h1>Joves R</h1>
+                            <small>Associate Consulatant at Eviden</small>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At praesentium architecto asperiores sunt, porro eaque expedita est ea non accusamus labore aliquid velit impedit ex, excepturi explicabo rerum quaerat ut.</p>
+                <img src="Image/post-image-2.webp" alt="" width="100%">
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="Image/thumbsup.png" alt="" width="25px">
+                        <img src="Image/love.png" alt=""width="25px">
+                        <img src="Image/clap.png" alt=""width="25px">
+                        <span class="liked-user">Loes jove and 715 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="Image/user-1.jpeg" alt="" class="post-activity-user-icon">
+                        <img src="Image/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/like.png" alt="" >
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/comment.png" alt="" >
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/share.png" alt="" >
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/send.png" alt="" >
+                        <span>Send</span>
+                    </div>
+                </div>
+                </div>
+                <div class="post">
+
+                    <div class="post-author">
+                        <img src="Image/user-3.png" alt="">
+                        <div>
+                            <h1>Joves R</h1>
+                            <small>Associate Consulatant at Eviden</small>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At praesentium architecto asperiores sunt, porro eaque expedita est ea non accusamus labore aliquid velit impedit ex, excepturi explicabo rerum quaerat ut.</p>
+                <img src="Image/post-image-2.webp" alt="" width="100%">
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="Image/thumbsup.png" alt="" width="25px">
+                        <img src="Image/love.png" alt=""width="25px">
+                        <img src="Image/clap.png" alt=""width="25px">
+                        <span class="liked-user">Loes jove and 715 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="Image/user-1.jpeg" alt="" class="post-activity-user-icon">
+                        <img src="Image/down-arrow.png" alt="" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/like.png" alt="" >
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/comment.png" alt="" >
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/share.png" alt="" >
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <img src="Image/send.png" alt="" >
+                        <span>Send</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Main Content ends -->
+
+            <!-- Right sidebar starts -->
+            <div class="right-sidebar">
+                <div class="sidebar-news">
+                    <img src="Image/more.png" alt="" class="info-icon">
+                    
+                    <h3>Trending News</h3>
+                    <a href="#">High demand for skilled manpower</a>
+                    <span>1d ago &middot;10,782 reader</span>
+
+                    <a href="#">Carrer growing horizontally</a>
+                    <span>1d ago &middot;89,782 reader</span>
+
+                    <a href="#">More hiring  = higher confidence ?</a>
+                    <span>1d ago &middot;10,782 reader</span>
+
+                    <a href="#">Gautam adani is worlds third richest</a>
+                    <span>1d ago &middot;10,782 reader</span>
+                    
+                    <a href="#">Gautam adani is worlds third richest</a>
+                    <span>1d ago &middot;10,782 reader</span>
+
+                    <a href="#" class="read-more-link">Read More</a>
+                </div>
+
+                <div class="sidebar-ad">
+                    <small>Ad &middot; &middot; &middot;</small>
+                    <p>Master the 5 principles of web design</p>
+                    <div>
+                        <img src="Image/user-1.jpeg" alt="">
+                        <img src="Image/mi-logo.png" alt="">
+                    </div>
+                    <b>Brand and Demand in Microsoft</b>
+                    <a href="#" class="ad-link">Learn More</a>
+                </div>
+
+                <div class="sidebar-useful-links">
+                    <a href="#">About</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Help Corner</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Advertising</a>
+                    <a href="#">Get the App</a>
+                    <a href="#">More</a>
+                    <div class="copyright-msg">
+                        <img src="Image/logo.png" alt="">
+                        <p>Linkedup &#169; 2024. All right reserved</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Right sidebar ends -->
+        </div>
+        <script>
+            let pro =document.getElementById("profileMenu");
+            function toggleMenu(){
+                profileMenu.classList.toggle("open-menu");                                                                                                                                                             
+            }
+        </script>
+    </body>
+</html>
+
